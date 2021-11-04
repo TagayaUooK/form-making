@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@media screen and (max-width: 896px) {
+nav .g_nav {display: none;}
+.contact nav .sp_nav_motion {top: 65px;}
+.contact header nav .g_nav {display: none;}
+nav .sp {display: block;}
+nav .sp_nav {box-shadow: 0 10px 25px 0 rgba(100, 100, 100, 0.5);}
+nav .sp_nav a {display: block;}
+nav .sp_nav_motion {top: 65px;}
+nav .sp_menu {display: block;}
+nav .sp img {width: 50px;}
+nav .signin {display: none;}
+.cafe_intro {grid-template-columns: repeat(2, 1fr);}
+.cafe_local {grid-template-columns: repeat(2, 1fr);}
+.goto_text {top: 25;	left: 25;}
+.goto_text h3 {font-size: 32px;}
+.goto_text p {font-size: 1.2rem;}
+.contact_box {width: 90%;}
+}
+
+@media screen and (max-width: 700px) {
+header h1.concept {font-size: 48px;}
+.goto_text {position: static;}
+footer .nav_area {display: block;}
+footer .inner h2 {border-bottom: 1px solid #ccc;}
+}
+
+@media screen and (max-width: 480px) {
+header h1.concept {font-size: 32px;}
+.cafe_intro {display: block;}
+.cafe_exp {grid-template-columns: repeat(2, 1fr);}
+.cafe_host {grid-template-columns: repeat(2, 1fr);}
+#signin_box {width: 80%;}
+.contact_box {width: 98%;}
+}

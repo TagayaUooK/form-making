@@ -1,0 +1,8 @@
+img/apple.png
+img/fb.png
+img/google.png
+img/twitter.png
+
+はサイト上のサインイン部分。にボタンとして配置。
+（反応については読み込み動作あり？
+不明として、確認をお願いします。）

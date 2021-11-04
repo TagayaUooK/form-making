@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+/* Hides from IE-mac \*/
+* html .clearfix{height: 1%;}
+*+html .clearfix{min-height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* */
+.clearfix:after {
+	content: ".";	display: block;	clear: both;
+	height: 0;	visibility: hidden;}
+.clearfix {	display: inline-table;}
+._click:hover {	cursor: pointer; opacity: 0.8;}
+
+.alert{
+	position: relative;
+	top: 0; z-index: 1; background-color: black;
+	width: 100%; text-align: center; padding: 18px;
+	color: white; font-size: 14px;
+	box-shadow: 5px 5px 5px 680px rgb(180,180,180,0.3);}
+.alert a{text-decoration: underline;  color: white;}
+.alert a:hover{opacity: 0.9;}
+.jump{
+	position: fixed;  right: 0;  bottom: 0;  height: 3rem;
+ 	line-height: 3rem;  color: white;  text-align: center;
+	cursor: pointer;  background-color: black;
+	padding: 0 10px;  transition: all .3s ease;}
+
+input{line-height: auto;	vertical-align: middle;}
+element.style{width: 100%; border-radius: 16px;}
+#overlay{
+	z-index: 998;  position: fixed;
+	top: 0;  left: 0;  width: 100%;  height: 100%;
+	background-color:  rgba(0, 0, 0, 0.5);
+	align-items: center;  justify-content: center;}
+.Iv{display: none;}
+#signin_box{
+	z-index: 999;  margin: auto;  width: 500px;
+	background-color: white;  border-radius: 12px;}
+.SiB{display: none;}
+#signin_box h2{
+	font-size: 1.5rem;  font-weight: bold;  text-align: center;
+	padding: 1rem 0;  border-bottom: 1px solid #ccc; color: black;}
+#signin_box dd{	padding: 5px 0;}
+#signin_box dd input{
+	width: 100%;  font-size: 1.2rem;  padding: 10px 2.5px;
+	border-radius: 8px;  border: 1px solid #aaa;}
+#signin_box dl{	padding: 20px;}
+#signin_box dl .sns{	border-width: 90%;	border-top: 1px solid #ccc;}
+#signin_box dd button{
+	color: white;	background-color: rgb(215, 4, 102);
+	width: 100%;	font-size: 1.2rem;	padding: 10px 2.5px;
+	border: 0;	border-radius: 8px;	cursor: pointer;}
+#signin_box .sns dd button{
+	color: black;  background-color: white;  width: 100%;
+	font-size: 1.2rem;  padding: 10px 2.5px;
+	border: 1px solid #ccc;  border-radius: 8px;}
+#signin_box .sns dd img{width: 1.5rem;}
+
+header{
+	position: relative;
+	width: 100%; min-height: 680px;
+	background-size: cover;
+	background-position: center;
+	background-image: url("../cafe/img/eyecatch.jpg");}
+header h1.concept{
+	width: 90%;	margin: auto;	position: absolute;
+	top: 250px;	left: 5%;
+	color: white;	font-size: 64px;
+	line-height: 64px;	font-weight: bold;}
+nav{
+	position: relative; top: 0;  margin: auto;  width: 100%;
+	padding: 0 5%;  background-color: transparent;
+	display: flex;  flex-wrap: wrap;  padding-top: 15px;
+	color: white;  transition: all .5s ease;}
+nav a{color: white;}
+.grand{
+	background-color: rgba(0,0,0,0.8); z-index: 2;
+	position: fixed; top: 0; transition: all .5s ease;}
+nav .logo{
+	flex: 25%; font-weight: bold; line-height: 32px;
+	display: flex; align-items: center;}
+nav .logo img{vertical-align: middle;}
+nav .g_nav {
+	flex: 50%; display: flex; flex-wrap: wrap;
+	justify-content: center; line-height: 50px;}
+nav .g_nav .menu{padding: 0 25px; cursor: pointer;}
+nav .sign{
+	flex: 25%;  display: flex;  flex-wrap: wrap;
+  justify-content: flex-end;  line-height: 50px;}
+nav .sp{display: none;}
+.sp_nav{
+	position: fixed; top: 125px; right: 30px; width: 12.5rem;
+	background-color: white; border-radius: 8px; display: none;}
+nav #des{
+	position: fixed; height: 100%; width: 100%;
+	background-color: rgba(0,0,0,0.8); display: none;}
+nav .sp_nav a {color: black;}
+nav .sp_menu {color: black;	padding: 0 1rem;}
+nav .sp_signin {
+	color: black;	padding: 0 1rem;	border-bottom: 1px solid #ccc;}
+nav .signup {margin-right: 20px;}
+header h1.concept {
+	width: 90%; margin: auto;	position: absolute;
+	top: 250px;	left: 5%;	color: white;
+	font-size: 64px;	line-height: 64px;	font-weight: bold;}
+
+section{margin: 40px 0;	padding: 0 5%;}
+section p{font-size: 14px; font-weight: 900;}
+section h2{font-size: 32px; font-weight: bold;}
+main{margin: 80px 0 60px;}
+.bg_white{background-color: white; color: black;}
+.bg_black{	background-color: black; color: white; padding: 40px 5%;}
+
+.cafe_intro{
+	margin: auto;	display: grid;
+	grid-template-columns: repeat(4, 1fr);}
+.cafe_intro .box{padding: 10px 0;}
+.cafe_intro .info{display: flex; justify-content: flex-start;}
+.cafe_intro .photo{width: 64px; height: 64px;}
+.cafe_intro .photo img{
+	width: 100%; height: 100%;
+	object-fit: cover; border-radius: 8px;}
+.cafe_intro .access{padding: 5px 15px;}
+.access .area{font-weight: bold;}
+
+.cafe_local{
+	margin: auto; display: grid;
+	grid-template-columns: repeat(4, 1fr); column-gap: 15px;}
+.cafe_local .box{padding: 20px 0;}
+.cafe_local .info{display: flex; justify-content: flex-start;}
+.cafe_local .photo{width: 100%; height: 100%;}
+.cafe_local .photo img{
+	width: 100%; height: 100%;
+	object-fit: cover; border-radius: 8px;}
+.cafe_local .text{font-size: 18px; font-weight: bold;}
+.goto{margin-top: 40px; opacity: 0.9; position: relative;}
+.goto_text{
+	position: absolute; top: 50px; left: 50px;
+	background-color: rgba(255,255,255,0.3); padding: 10px;}
+.goto_text h3{font-size: 42px; font-weight: bold; color: black;}
+.goto_text p{font-size: 18px; font-weight: 100; color: black;}
+
+.cafe_exp{
+	margin: 15px auto 0 auto; display: grid;
+	grid-template-columns: repeat(3, 1fr); column-gap: 15px;}
+.cafe_exp .box{padding: 10px 0;}
+.cafe_exp .info{display: flex; flex-direction: column;}
+.cafe_exp .photo{width: 100%; height: 100%;}
+.cafe_exp .photo img{
+	width: 100%; height: 100%;
+	object-fit: cover; border-radius: 8px;}
+.cafe_exp .text{font-size: 18px; font-weight: bold;}
+.cafe_exp p{font-size: 14px; font-weight: 100;}
+
+.cafe_host{
+	margin: 0 auto; display: grid;
+	grid-template-columns: repeat(3, 1fr); column-gap: 15px;}
+.cafe_host .box{padding: 10px 0;}
+.cafe_host .info{display: flex; flex-direction: column;}
+.cafe_host .photo{width: 100%; height: 100%;}
+.cafe_host .photo img{
+	width: 100%; height: 100%;
+	object-fit: cover; border-radius: 8px;}
+.cafe_host .text{font-size: 18px; font-weight: bold;}
+
+footer{
+	border-top: 1px solid #ddd;
+	background-color: #f7f7f7; padding: 4% 0;}
+footer .outer{width: 90%; margin: auto; font-size: 0.9rem;}
+footer .nav_area{
+	display: grid; grid-template-columns: repeat(4, 1fr);}
+footer .inner{flex: auto;}
+footer .inner h2{font-weight: bold;}
+footer .inner li{margin: 1rem 0;}
+footer .inner a{color: #333;}
+footer .reserved{
+	padding: 2%; color: #333; border-top: 1px solid #ccc;}
