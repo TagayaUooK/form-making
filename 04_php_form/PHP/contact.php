@@ -1,29 +1,3 @@
-<?php
-function Ch_name(){
-$name="";
-  if(isset($_POST["send_check"])){
-  if(empty($_POST["name"])){$name= "この項目は入力必須です";}
-  else if(mb_strlen($_POST["name"])>10){$name= "10文字以内で入力してください";}
-}}
-function Ch_kana(){
-$kana="";
-  if(isset($_POST["send_check"])){
-  if(empty($_POST["kana"])){print "この項目は入力必須です";}
-  else if(mb_strlen($_POST["kana"])>10){print "10文字以内で入力してください";}
-}}
-function Ch_tel(){
-$tel="";
-  if(isset($_POST["send_check"])){
-  if(empty($_POST["tel"])){print "この項目は入力必須です";}
-  else if(mb_strlen($_POST["tel"])>10){print "10文字以内で入力してください";}
-}}
-function Ch_email(){
-$email="";
-  if(isset($_POST["send_check"])){
-  if(empty($_POST["body"])){print "この項目は入力必須です";}
-}}
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +23,7 @@ $email="";
   <p><span class="required">*</span>は必須項目となります。</p>
   <dl>
     <dt><label for="name">氏名</label>
-      <span class="required">*<?php echo Ch_name(); ?></span></dt>
+      <span class="required">*</span></dt>
       <dd><input type="text" id="In_name" placeholder="山田太郎"></dd>
     <dd><label for="kana">フリガナ</label>
       <span class="required">*</span></dt>
