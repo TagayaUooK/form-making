@@ -5,7 +5,7 @@ document.getElementById("send_check").addEventListener("click",function() {
   var hold_email = $("#In_email").val();
   var hold_body = $("#In_body").val();
 
-  var Check_name = /^[\u3040-\u309f\u30a0-\u30ff\u30e0-\u9fc]{1,10}$/;
+  var Check_name = /^[\u3040-\u309f\u30a0-\u30ff\u30e0-\u9fcf]{1,10}$/;
   var Check_kana = /^[\u30a0-\u30ff]{1,10}$/;
   var Check_email = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/;
   var Check_tel = /^[0-9]{10,11}$/;
@@ -23,11 +23,11 @@ document.getElementById("send_check").addEventListener("click",function() {
     }else if(!Check_email.test(hold_email))
       {message.push("メールアドレスの形式が不正です。")};
   if(hold_body ==""){message.push("お問い合わせ内容が未入力です。")};
-  if(message.length > 0){alert(message); return;}
+  if(message.length > 0){alert(message); return;
 /* <span>*</span>の間にmessage.pushの内容を入れる。
   PHP側での処理が良い？
   */
-  else if(message.length == 0){
+  }else if(message.length == 0){
   sessionStorage.setItem("NAME",hold_name);
   sessionStorage.setItem("KANA",hold_kana);
   sessionStorage.setItem("TEL",hold_tel);
