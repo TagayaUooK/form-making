@@ -1,24 +1,24 @@
 <?php
-function Ch_name(){
-$name="";
+function Ch_name(){   $name="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["name"])){$name= "この項目は入力必須です";}
   else if(mb_strlen($_POST["name"])>10){$name= "10文字以内で入力してください";}
 }}
-function Ch_kana(){
-$kana="";
+function Ch_kana(){   $kana="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["kana"])){print "この項目は入力必須です";}
   else if(mb_strlen($_POST["kana"])>10){print "10文字以内で入力してください";}
 }}
-function Ch_tel(){
-$tel="";
+function Ch_tel(){    $tel="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["tel"])){print "この項目は入力必須です";}
   else if(mb_strlen($_POST["tel"])>10){print "10文字以内で入力してください";}
 }}
-function Ch_email(){
-$email="";
+function Ch_email(){   $email="";
+  if(isset($_POST["send_check"])){
+  if(empty($_POST["Email"])){print "この項目は入力必須です";}
+}}
+function Ch_body(){   $body="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["body"])){print "この項目は入力必須です";}
 }}
@@ -42,7 +42,7 @@ $email="";
 <section>
 <div class="contact_box">
 <h2>お問い合わせ</h2>
-<form method="post" action="test.php">
+<form method="post" action="contact.php">
   <h3>下記の項目をご記入の上送信ボタンを押してください</h3>
   <p>送信頂いた件につきましては、当社より折り返しご連絡を差し上げます。</p>
   <p>なお、ご連絡までに、お時間を頂く場合もございますので予めご了承ください。</p>
