@@ -37,7 +37,7 @@ document.getElementById("send_check").addEventListener("click",function() {
 };
 },false);
 
-window.onload = function() {
+window.onload = function() {/*読み込み時<button type="button">に変更？  */
 document.getElementById("In_name").innerHTML = sessionStorage.getItem("NAME");
 document.getElementById("In_kana").innerHTML = sessionStorage.getItem("KANA");
 document.getElementById("In_tel").innerHTML = sessionStorage.getItem("TEL");
