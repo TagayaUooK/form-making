@@ -63,22 +63,32 @@ function Ch_body(){   $body="";
   <dl>
     <dt><label for="name">氏名</label>
       <span class="required">*</span></dt>
-      <dd><input type="text" name="name" id="In_name" placeholder="山田太郎"></dd>
+      <dd>
+        <input type="text" name="name" id="In_name" placeholder="山田太郎">
+      </dd>
     <dd><label for="kana">フリガナ</label>
       <span class="required">*</span></dt>
-      <dd><input type="text" name="kana" id="In_kana" placeholder="ヤマダタロウ"></dd>
+      <dd>
+        <input type="text" name="kana" id="In_kana" placeholder="ヤマダタロウ">
+      </dd>
     <dd><label for="tel">電話番号</label>
       <span class="required">*</span></dt>
-	    <dd><input type="text" name="tel" id="In_tel" placeholder="09012345678"></dd>
+	    <dd>
+        <input type="text" name="tel" id="In_tel" placeholder="09012345678">
+      </dd>
     <dd><label for="email">メールアドレス</label>
 	    <span class="required">*</span></dt>
-	  <dd><input type="text" name="Email"id="In_email" placeholder="test@test.co.jp"></dd>
+	  <dd>
+      <input type="text" name="Email" id="In_email" placeholder="test@test.co.jp">
+    </dd>
   </dl>
   <h3><label for="body">お問い合わせ内容をご記入ください。
   <span class="required">*</span></label></h3>
   <dl class="body">
 	  <dd><textarea name="body" id="In_body"></textarea></dd>
-	  <dd><button type="button" id="send_check">送信</button></dd>
+	  <dd>
+      <button type="button" name="send_check" id="send_check">送信</button>
+    </dd>
   </dl>
 </form></div>
 </section>
