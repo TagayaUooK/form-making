@@ -10,15 +10,21 @@ function Ch_kana(){   $kana="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["kana"])){print "この項目は入力必須です";}
   else if(mb_strlen($_POST["kana"])>10){print "10文字以内で入力してください";}
+  else if(!in_array($_POST,["ヤマダタロウ"])){}
+  else{$name= "この項目は入力必須です";}
 }}
 function Ch_tel(){    $tel="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["tel"])){print "この項目は入力必須です";}
   else if(mb_strlen($_POST["tel"])>10){print "10文字以内で入力してください";}
+  else if(!in_array($_POST,["09012345678"])){}
+  else{$name= "この項目は入力必須です";}
 }}
 function Ch_email(){   $email="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["Email"])){print "この項目は入力必須です";}
+  else if(!in_array($_POST,["test@test.co.jp"])){}
+  else{$name= "この項目は入力必須です";}
 }}
 function Ch_body(){   $body="";
   if(isset($_POST["send_check"])){
