@@ -3,6 +3,8 @@ function Ch_name(){   $name="";
   if(isset($_POST["send_check"])){
   if(empty($_POST["name"])){$name= "この項目は入力必須です";}
   else if(mb_strlen($_POST["name"])>10){$name= "10文字以内で入力してください";}
+  else if(!in_array($_POST,["山田太郎"])){}
+  else{$name= "この項目は入力必須です";}
 }}
 function Ch_kana(){   $kana="";
   if(isset($_POST["send_check"])){
