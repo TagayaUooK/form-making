@@ -25,6 +25,19 @@ if(empty($_POST["sitename"])){
 <input type="text" name="sitename" size="15" value="TRYPHP">
 <input type="submit" name="sendin" value="送信">
 </br><?php echo Ch_name();?>
+</br>
+<?php
+if(isset($_POST["sendin"])){
+$error=0; $log="";
+if(empty($_POST["sitename"])){
+  $log= "この項目は入力必須です";
+}else if(mb_strlen($_POST["sitename"])>10){
+  $log= "10文字以内で入力してください";
+}else if(!in_array($_POST["sitename"],["TRYPHP"])){
+  $log= "問題なし";
+}else{$error=2; /*結果：１ */}
+} print $log; print $error;
+?>
 </form>
 
 </body></html>
