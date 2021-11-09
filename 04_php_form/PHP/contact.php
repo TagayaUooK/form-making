@@ -86,7 +86,7 @@ function Ch_body(){   $body="";
   <dl class="body">
 	  <dd><textarea name="body" id="In_body"></textarea></dd>
 	  <dd>
-      <button type="submit" name="send_check" id="send_check">送信</button>
+      <button type="button" name="send_check" id="send_check">送信</button>
     </dd>
   </dl>
 </form></div>

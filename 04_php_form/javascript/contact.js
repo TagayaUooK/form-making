@@ -46,5 +46,6 @@ document.getElementById("In_body").innerHTML = sessionStorage.getItem("BODY");
 sessionStorage.clear();
 };
 /*氏名～メールまで戻った後読み込まれるが、表示されず
-  原因：Input？　textareaなら表示される。　統一するか？
-      or Inputの後に<a>入れる？*/
+  原因：Inputの存在？　textareaなら表示される。
+    ・　統一する？⇒課題：textareaの個別設定必要
+    ・  Inputの後に<a>入れる？⇒不可：テキスト下に表示される*/

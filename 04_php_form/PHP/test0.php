@@ -36,7 +36,8 @@ if(empty($_POST["sitename"])){
 }else if(!in_array($_POST["sitename"],["TRYPHP"])){
   $log= "問題なし";
 }else{$error=2; /*結果：１ */}
-} print $log; print $error;
+} echo $log; print $error;
+/* 初期、表示エラー起こるので注意   */
 ?>
 </form>
 
