@@ -1,8 +1,7 @@
 <?php
 function Ch_name(){
-$log="";
+$log="";$error=0;
 if(isset($_POST["sendin"])){
-$error=0;
 if(empty($_POST["sitename"])){
   $log= "この項目は入力必須です";
 }else if(mb_strlen($_POST["sitename"])>10){
@@ -27,8 +26,8 @@ if(empty($_POST["sitename"])){
 </br><?php echo Ch_name();?>
 </br>
 <?php
+$error=0; $log="";  /* これをいれると初期から表示される */
 if(isset($_POST["sendin"])){
-$error=0; $log="";
 if(empty($_POST["sitename"])){
   $log= "この項目は入力必須です";
 }else if(mb_strlen($_POST["sitename"])>10){
@@ -37,7 +36,6 @@ if(empty($_POST["sitename"])){
   $log= "問題なし";
 }else{$error=2; /*結果：１ */}
 } echo $log; print $error;
-/* 初期、表示エラー起こるので注意   */
 ?>
 </form>
 
