@@ -1,44 +1,48 @@
 <?php
-function Ch_name(){   $name="";
-  if(isset($_POST["send_check"])){
+function Ch_name(){
+  if(isset($_POST["send_check"])){   $name="";
   if(empty($_POST["name"])){$name= "この項目は入力必須です";}
   else if(mb_strlen($_POST["name"])>10){$name= "10文字以内で入力してください";}
-  else if(!in_array($_POST,["山田太郎"])){}
+  else if(!in_array($_POST,["山田太郎"])){$name="_";}
   else{$name= "この項目は入力必須です";}
-  print $name;}
+  return $name;}
 }
-function Ch_kana(){   $kana="";
-  if(isset($_POST["send_check"])){
+function Ch_kana(){
+  if(isset($_POST["send_check"])){   $kana="";
   if(empty($_POST["kana"])){$kana= "この項目は入力必須です";}
   else if(mb_strlen($_POST["kana"])>10){$kana= "10文字以内で入力してください";}
-  else if(!in_array($_POST,["ヤマダタロウ"])){}
+  else if(!in_array($_POST,["ヤマダタロウ"])){$kana="_";}
   else{$kana= "この項目は入力必須です";}
-  print $kana;}
+  return $kana;}
 }
-function Ch_tel(){    $tel="";
-  if(isset($_POST["send_check"])){
+function Ch_tel(){
+  if(isset($_POST["send_check"])){    $tel="";
   if(empty($_POST["tel"])){$tel= "この項目は入力必須です";}
   else if(mb_strlen($_POST["tel"])>10){$tel= "10文字以内で入力してください";}
-  else if(!in_array($_POST,["09012345678"])){}
+  else if(!in_array($_POST,["09012345678"])){$tel="_";}
   else{$tel= "この項目は入力必須です";}
-  print $tel;}
+  return $tel;}
 }
-function Ch_email(){   $email="";
-  if(isset($_POST["send_check"])){
+function Ch_email(){
+  if(isset($_POST["send_check"])){   $email="";
   if(empty($_POST["Email"])){$email= "この項目は入力必須です";}
-  else if(!in_array($_POST,["test@test.co.jp"])){}
+  else if(!in_array($_POST,["test@test.co.jp"])){$email="_";}
   else{$email= "この項目は入力必須です";}
-  print $email;}
+  return $email;}
 }
-function Ch_body(){   $body="";
-  if(isset($_POST["send_check"])){
+function Ch_body(){
+  if(isset($_POST["send_check"])){   $body="";
   if(empty($_POST["body"])){$body= "この項目は入力必須です";}
-  else{}
-  print $body;}
+  else{$body="_";}
+  return $body;}
 }
-/*
+function Ch_page(){
+  $n=Ch_name(); $k=Ch_kana(); $t=Ch_tel(); $m=Ch_email(); $b=Ch_body();
+  if($n=="_" && $k=="_" && $t=="_" && $m=="_" && $b=="_")
+    {  header("Location:confirm.php"); exit();}
+  else{}
+}
 
- */
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,7 +95,7 @@ function Ch_body(){   $body="";
 	  <dd><textarea name="body" id="In_body"></textarea></dd>
 	  <dd>
       <button type="submit" name="send_check" id="send_check">送信</button>
-      
+      <?php Ch_page(); ?>
     </dd>
   </dl>
 </form></div>
