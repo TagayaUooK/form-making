@@ -1,3 +1,11 @@
+<?php
+function Ch_name(){$name=$_POST["name"]; return $name;}
+function Ch_kana(){$kana=$_POST["kana"]; return $kana;}
+function Ch_tel(){$tel=$_POST["tel"]; return $tel;}
+function Ch_email(){$email=$_POST["Email"]; return $email;}
+function Ch_body(){$body=$_POST["body"]; return $body;}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

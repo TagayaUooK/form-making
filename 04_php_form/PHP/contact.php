@@ -39,7 +39,7 @@ function Ch_body(){
 function Ch_page(){
   $n=Ch_name(); $k=Ch_kana(); $t=Ch_tel(); $m=Ch_email(); $b=Ch_body();
   if($n=="_" && $k=="_" && $t=="_" && $m=="_" && $b=="_")
-    {  header("Location:confirm.php"); exit();}
+    {  header("Location:confirm.php",true,307); exit();}
   else{}
 }
 
