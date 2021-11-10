@@ -33,7 +33,6 @@ document.getElementById("send_check").addEventListener("click",function() {
   sessionStorage.setItem("TEL",hold_tel);
   sessionStorage.setItem("Email",hold_email);
   sessionStorage.setItem("BODY",hold_body);
-  document.location.href = "confirm.php";
 };
 },false);
 

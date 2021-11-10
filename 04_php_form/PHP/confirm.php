@@ -4,6 +4,14 @@ function Ch_kana(){$kana=$_POST["kana"]; return $kana;}
 function Ch_tel(){$tel=$_POST["tel"]; return $tel;}
 function Ch_email(){$email=$_POST["Email"]; return $email;}
 function Ch_body(){$body=$_POST["body"]; return $body;}
+/*ページ移動をこちらで処理
+function Ch_page(){
+  if(){
+
+  }else if(){
+
+  }
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -31,15 +39,15 @@ function Ch_body(){$body=$_POST["body"]; return $body;}
 	<p>内容を訂正する場合は戻るを押してください。</p>
 	<dl class="confirm">
 	<dt>氏名</dt>
-	    <dd><span id="re_name"></span></dd>
+	    <dd><span id="re_name"><?php echo Ch_name(); ?></span></dd>
 	<dt>フリガナ</dt>
-	    <dd><span id="re_kana"></span></dd>
+	    <dd><span id="re_kana"><?php echo Ch_kana(); ?></span></dd>
 	<dt>電話番号</dt>
-	    <dd><span id="re_tel"></span></dd>
+	    <dd><span id="re_tel"><?php echo Ch_tel(); ?></span></dd>
 	<dt>メールアドレス</dt>
-	    <dd><span id="re_email"></span></dd>
+	    <dd><span id="re_email"><?php echo Ch_email(); ?></span></dd>
 	<dt>お問い合わせ内容</dt>
-	    <dd><span id="re_body"></span></dd>
+	    <dd><span id="re_body"><?php echo Ch_body(); ?></span></dd>
 	</dl>
 	<dd style="display: flex;">
     <button type="button" id="send_back">戻る</button>
