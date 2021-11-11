@@ -4,14 +4,12 @@ function Ch_kana(){$kana=$_POST["kana"]; return $kana;}
 function Ch_tel(){$tel=$_POST["tel"]; return $tel;}
 function Ch_email(){$email=$_POST["Email"]; return $email;}
 function Ch_body(){$body=$_POST["body"]; return $body;}
-/*ページ移動をこちらで処理
+
 function Ch_page(){
-  if(){
+  if(isset($_POST["send_back"])){ header("Location:contact.php",true,307); exit();}
+  else if(isset($_POST["send_last"])){  header("Location:complete.php",true,307); exit();}
+}
 
-  }else if(){
-
-  }
-}*/
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +32,7 @@ function Ch_page(){
 <section>
 <div class="contact_box">
     <h2>お問い合わせ</h2>
-  <form>
+  <form method="post" action="confirm.php">
 　<p>下記の内容をご確認の上送信ボタンを押してください。</p>
 	<p>内容を訂正する場合は戻るを押してください。</p>
 	<dl class="confirm">
@@ -50,8 +48,10 @@ function Ch_page(){
 	    <dd><span id="re_body"><?php echo Ch_body(); ?></span></dd>
 	</dl>
 	<dd style="display: flex;">
-    <button type="button" id="send_back">戻る</button>
-    <button type="button" id="send_last">送信</button></dd>
+    <button type="submit" name="send_back" id="send_back">戻る</button>
+    <button type="submit" name="send_last" id="send_last">送信</button>
+    <?php Ch_page(); ?>
+  </dd>
 </form></div>
 </section>
 <?php require("../PHP/footer.php"); ?>
