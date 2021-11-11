@@ -3,7 +3,7 @@ function Ch_name(){
   if(isset($_POST["send_check"])){   $name="";
   if(empty($_POST["name"])){$name= "この項目は入力必須です";}
   else if(mb_strlen($_POST["name"])>10){$name= "10文字以内で入力してください";}
-  else if(!in_array($_POST,["山田太郎"])){$name="_";}
+  else if(!in_array($_POST["name"],["山田太郎"])){$name="_";}
   else{$name= "この項目は入力必須です";}
   return $name;}
 }
@@ -11,22 +11,26 @@ function Ch_kana(){
   if(isset($_POST["send_check"])){   $kana="";
   if(empty($_POST["kana"])){$kana= "この項目は入力必須です";}
   else if(mb_strlen($_POST["kana"])>10){$kana= "10文字以内で入力してください";}
-  else if(!in_array($_POST,["ヤマダタロウ"])){$kana="_";}
+  else if(!in_array($_POST["kana"],["ヤマダタロウ"])){$kana="_";}
   else{$kana= "この項目は入力必須です";}
   return $kana;}
 }
 function Ch_tel(){
   if(isset($_POST["send_check"])){    $tel="";
   if(empty($_POST["tel"])){$tel= "この項目は入力必須です";}
-  else if(mb_strlen($_POST["tel"])>10){$tel= "10文字以内で入力してください";}
-  else if(!in_array($_POST,["09012345678"])){$tel="_";}
+  else if(!in_array($_POST["tel"],["09012345678"])){
+    if(preg_match("/[0-9]{10,11}/",$_POST["tel"])){  $tel="_";}
+    else{$tel= "10～11文字以内でハイフンを入れないで入力してください";}}
   else{$tel= "この項目は入力必須です";}
   return $tel;}
 }
 function Ch_email(){
   if(isset($_POST["send_check"])){   $email="";
   if(empty($_POST["Email"])){$email= "この項目は入力必須です";}
-  else if(!in_array($_POST,["test@test.co.jp"])){$email="_";}
+  else if(!in_array($_POST,["test@test.co.jp"])){
+      if(false !== filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $email= "正しいEメールアドレスを入力してください";}
+      else{$email="_";}}
   else{$email= "この項目は入力必須です";}
   return $email;}
 }
