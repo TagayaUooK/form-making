@@ -1,11 +1,14 @@
 document.getElementById("send_check").addEventListener("click",function() {
-  var hold_name = $("#In_name").val();
-  var hold_kana = $("#In_kana").val();
+  var name = $("#In_name").val();  var hold_name = Check_W(name);
+  var kana = $("#In_kana").val();  var hold_kana = Check_W(kana);
   var hold_tel = $("#In_tel").val();
   var hold_email = $("#In_email").val();
-  var hold_body = $("#In_body").val();
-  var dogd = hold_body.replace(/&/g, '&lt;').replace(/</g, '&lt;')
+  var body = $("#In_body").val();  var hold_body = Check_W(body);
+
+  function Check_W(Word){
+    var ch_Word = word..replace(/&/g, '&lt;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, "&#x27;");
+  };
 
   var Check_name = /^[\u3040-\u309f\u30a0-\u30ff\u30e0-\u9fcf]{1,10}$/;
   var Check_kana = /^[\u30a0-\u30ff]{1,10}$/;
