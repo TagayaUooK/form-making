@@ -1,6 +1,6 @@
 <?php
 function Ch_name(){
-$log=$_POST["sitename"];
+$log= htmlspecialchars($_POST["sitename"], ENT_QUOTES, "UTF-8");
 return $log;
 }
 ?>

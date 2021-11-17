@@ -4,6 +4,8 @@ document.getElementById("send_check").addEventListener("click",function() {
   var hold_tel = $("#In_tel").val();
   var hold_email = $("#In_email").val();
   var hold_body = $("#In_body").val();
+  var dogd = hold_body.replace(/&/g, '&lt;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, "&#x27;");
 
   var Check_name = /^[\u3040-\u309f\u30a0-\u30ff\u30e0-\u9fcf]{1,10}$/;
   var Check_kana = /^[\u30a0-\u30ff]{1,10}$/;
@@ -32,9 +34,10 @@ document.getElementById("send_check").addEventListener("click",function() {
   sessionStorage.setItem("KANA",hold_kana);
   sessionStorage.setItem("TEL",hold_tel);
   sessionStorage.setItem("Email",hold_email);
-  sessionStorage.setItem("BODY",hold_body);
+  sessionStorage.setItem("BODY",dogd);
 };
 },false);
+
 
 window.onload = function() {/*読み込み時<button type="button">に変更？  */
 document.getElementById("In_name").innerHTML = sessionStorage.getItem("NAME");

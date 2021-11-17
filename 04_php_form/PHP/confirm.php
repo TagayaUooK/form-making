@@ -3,7 +3,8 @@ function Ch_name(){$name=$_POST["name"]; return $name;}
 function Ch_kana(){$kana=$_POST["kana"]; return $kana;}
 function Ch_tel(){$tel=$_POST["tel"]; return $tel;}
 function Ch_email(){$email=$_POST["Email"]; return $email;}
-function Ch_body(){$body=$_POST["body"]; return $body;}
+function Ch_body(){
+  $str=htmlspecialchars($_POST["body"], ENT_QUOTES,'UTF-8'); return $str;}
 
 function Ch_page(){
   if(isset($_POST["send_back"])){ header("Location:contact.php",true,307); exit();}
