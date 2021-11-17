@@ -28,23 +28,20 @@ function Ch_email(){
   if(isset($_POST["send_check"])){   $email="";
   if(empty($_POST["Email"])){$email= "この項目は入力必須です";}
   else if(!in_array($_POST,["test@test.co.jp"])){
-      if(false !== filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $email= "正しいEメールアドレスを入力してください";}
-      else{$email="_";}}
+      if(false !== filter_var($email, FILTER_VALIDATE_EMAIL))
+      {$email= "正しいEメールアドレスを入力してください";}else{$email="_";}}
   else{$email= "この項目は入力必須です";}
   return $email;}
 }
 function Ch_body(){
   if(isset($_POST["send_check"])){   $body="";
-  if(empty($_POST["body"])){$body= "この項目は入力必須です";}
-  else{$body="_";}
+  if(empty($_POST["body"])){$body= "この項目は入力必須です";}else{$body="_";}
   return $body;}
 }
 function Ch_page(){
   $n=Ch_name(); $k=Ch_kana(); $t=Ch_tel(); $m=Ch_email(); $b=Ch_body();
   if($n=="_" && $k=="_" && $t=="_" && $m=="_" && $b=="_")
-    {  header("Location:confirm.php",true,307); exit();}
-  else{}
+    {header("Location:confirm.php",true,307); exit();}
 }
 
 ?>
