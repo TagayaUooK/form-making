@@ -1,5 +1,4 @@
-window.onload = function() {  alert("OK");
-
+window.onload = function() {
 document.getElementById("re_name").innerHTML = sessionStorage.getItem("NAME");
 document.getElementById("re_kana").innerHTML = sessionStorage.getItem("KANA");
 document.getElementById("re_tel").innerHTML = sessionStorage.getItem("TEL");
