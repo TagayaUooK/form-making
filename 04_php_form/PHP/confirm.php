@@ -1,10 +1,12 @@
 <?php
 function Ch_name(){
-  $name=htmlspecialchars($_POST["name"],ENT_QUOTES,'UTF-8'); return $name;}
+  $name=$_POST["name"]; return $name;}
 function Ch_kana(){
-  $kana=htmlspecialchars($_POST["kana"],ENT_QUOTES,'UTF-8'); return $kana;}
-function Ch_tel(){   $tel=$_POST["tel"]; return $tel;}
-function Ch_email(){ $email=$_POST["Email"]; return $email;}
+  $kana=$_POST["kana"]; return $kana;}
+function Ch_tel(){
+  $tel=$_POST["tel"]; return $tel;}
+function Ch_email(){
+  $email=$_POST["Email"]; return $email;}
 function Ch_body(){
   $str=htmlspecialchars($_POST["body"], ENT_QUOTES,'UTF-8'); return $str;}
 

@@ -6,7 +6,8 @@ document.getElementById("send_check").addEventListener("click",function() {
   var body = $("#In_body").val();  var hold_body = Check_W(body);
 
   function Check_W(Word){
-    var ch_Word = word..replace(/&/g, '&lt;').replace(/</g, '&lt;')
+    var ch_Word ="";
+    ch_Word= word.replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, "&#x27;");
   };
 
@@ -37,12 +38,13 @@ document.getElementById("send_check").addEventListener("click",function() {
   sessionStorage.setItem("KANA",hold_kana);
   sessionStorage.setItem("TEL",hold_tel);
   sessionStorage.setItem("Email",hold_email);
-  sessionStorage.setItem("BODY",dogd);
+  sessionStorage.setItem("BODY",hold_body);
+  document.location.href = "confirm.php";
 };
 },false);
 
 
-window.onload = function() {/*読み込み時<button type="button">に変更？  */
+window.onload = function() {
 document.getElementById("In_name").innerHTML = sessionStorage.getItem("NAME");
 document.getElementById("In_kana").innerHTML = sessionStorage.getItem("KANA");
 document.getElementById("In_tel").innerHTML = sessionStorage.getItem("TEL");
