@@ -29,20 +29,16 @@ document.getElementById("send_check").addEventListener("click",function() {
     }else if(!Check_email.test(hold_email))
       {message.push("メールアドレスの形式が不正です。")};
   if(hold_body ==""){message.push("お問い合わせ内容が未入力です。")};
-  if(message.length > 0){alert(message); return;
-/* <span>*</span>の間にmessage.pushの内容を入れる。
-  PHP側での処理が良い？
-  */
-  }else if(message.length == 0){
+  if(message.length > 0){alert(message); return;}
+  else if(message.length == 0){
   sessionStorage.setItem("NAME",hold_name);
   sessionStorage.setItem("KANA",hold_kana);
   sessionStorage.setItem("TEL",hold_tel);
   sessionStorage.setItem("Email",hold_email);
   sessionStorage.setItem("BODY",hold_body);
   document.location.href = "confirm.php";
-};
+  };
 },false);
-
 
 window.onload = function() {
 document.getElementById("In_name").innerHTML = sessionStorage.getItem("NAME");

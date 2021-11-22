@@ -8,7 +8,6 @@ function Ch_email(){ $email=$_POST["Email"]; return $email;}
 function Ch_body(){
   $str=htmlspecialchars($_POST["body"], ENT_QUOTES,'UTF-8'); return $str;}
 
-/*原因*/
 function Ch_page(){
   if(isset($_POST["send_back"])){ header("Location:contact.php",true,307); exit();}
   else if(isset($_POST["send_last"])){  header("Location:complete.php",true,307); exit();}
